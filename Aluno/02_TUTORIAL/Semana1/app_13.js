@@ -1,5 +1,6 @@
 // Recursos
 var express = require('express'); // Recurso para Express - para instalar o Express: npm install express --save
+const { runInNewContext } = require('vm');
 
 // Definições da URL do endpoint
 var hostname = '127.0.0.1';
@@ -10,8 +11,10 @@ var app = express();
 
 app.get('/', (req, res) => {
 	req.query.nome
+	req.query.idade
 	res.write("<h1> Etapa 1 - INSTALACAO - EndPoint GET</h1>")
-	res.end("<h2>Hello " + req.query.nome + " voce conseguiu um GET! bem sucedido</h2>");
+	res.end("<h2>Hello " + req.query.nome + "Idade" + req.query.idade 
+	+ " voce conseguiu um GET! bem sucedido</h2>");
 });
 
 // Inicia o servidor
