@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />	
+    	<title> Gerentes </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var gerentes = [];
+            function Gerente(nome, projeto){
+                this.array = [];
+                array.push(nome);
+                array.push(projeto);
+                return(array);
+            }
+            function novo(){
+                var nome = n;
+                var projeto = p;
+                var G = Gerente(nome,projeto);
+                gerentes.push(G);
+                for (i=0; i <= gerentes.length; i++){
+                    document.write(gerentes[i]);
+                }
+            }
+        </script>
+        <input type="text" id="n"><br>
+        <input type="text" id="p"><br>
+        <input type="button" id= "botao" onclick="novo()"> 
+    </body>
+</html>
